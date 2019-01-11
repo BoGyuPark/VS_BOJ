@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{3B63216D-EB08-4387-8DE5-988D7A214ADF}</ProjectGuid>
+    <ProjectGuid>{547C8992-4B89-409D-A639-B231477168AB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Stage15</RootNamespace>
+    <RootNamespace>Stage16DP</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,26 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="10872_Factorial.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="11050_BinomialCoefficient_1.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="11051_BinomialCoefficient_2.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="11401_BinomialCoefficient_3.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="1676_NumOfZero_Factorial.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="2407_Combination.cpp" />
-    <ClCompile Include="6591_ShowDown.cpp" />
-    <ClCompile Include="9375_KingOfFashion.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="1005_ACMCraft.cpp" />
+    <ClCompile Include="10844_EasyStairs.cpp" />
+    <ClCompile Include="11066_MergeFile.cpp" />
+    <ClCompile Include="1149_RGBdistance.cpp" />
+    <ClCompile Include="1463_MakeItOne.cpp" />
+    <ClCompile Include="1912_ContinuousSum.cpp" />
+    <ClCompile Include="1932_IntegerTriangle.cpp" />
+    <ClCompile Include="2293_Coin1.cpp" />
+    <ClCompile Include="2579_ClimbingStairs.cpp" />
+    <ClCompile Include="9251_LCS.cpp" />
+    <ClCompile Include="9252_LCS2.cpp" />
+    <ClCompile Include="9461_PadovanSequence.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1520_Downhill.cpp" />
+    <None Include="2156_WineTasting.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
