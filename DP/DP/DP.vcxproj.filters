@@ -30,5 +30,20 @@
     <ClCompile Include="11052_SellingBungeoppang.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="10844_EasyStair.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11057_Uphill.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="9465_Sticker.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2156_TastingWine.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2193_PinaryNumber.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
