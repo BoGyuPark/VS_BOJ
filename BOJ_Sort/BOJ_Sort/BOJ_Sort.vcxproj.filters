@@ -15,31 +15,20 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1149_RGBdistance.cpp">
+    <ClCompile Include="10814_SortAge.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1932_IntegerTriangle.cpp">
+    <ClCompile Include="10825_LanEngMath.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="1005_ACMCraft.cpp">
+    <ClCompile Include="11652_Card.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2293_Coin1.cpp">
+    <ClCompile Include="11004_KthNum.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="9251_LCS.cpp">
+    <ClCompile Include="1377_BubbleSort.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="11066_MergeFile.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="9252_LCS2.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="1520_Downhill.cpp">
-      <Filter>소스 파일</Filter>
-    </None>
   </ItemGroup>
 </Project>
