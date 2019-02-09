@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{0CDBBD9D-31ED-4D4D-9E3E-22ECA67551E6}</ProjectGuid>
+    <ProjectGuid>{32EF5634-EBB8-4913-B14B-4B8D8C514AD8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BOJSWPracticeBFS</RootNamespace>
+    <RootNamespace>BOJSWPracticeDP</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,44 +139,43 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BOJ_12851.cpp">
+    <ClCompile Include="BOJ_10422.cpp" />
+    <ClCompile Include="BOJ_10942_bottom_up.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ_13913.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="BOJ_1525.cpp">
+    <ClCompile Include="BOJ_10942_topdown.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ_15558.cpp">
+    <ClCompile Include="BOJ_11048_1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ_1727.cpp">
+    <ClCompile Include="BOJ_11048_2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ_2251.cpp">
+    <ClCompile Include="BOJ_11048_3.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ_4991.cpp">
+    <ClCompile Include="BOJ_11048_4.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ_6087.cpp">
+    <ClCompile Include="BOJ_11048_5.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ_8111.cpp">
+    <ClCompile Include="BOJ_11058.cpp" />
+    <ClCompile Include="BOJ_11066.cpp" />
+    <ClCompile Include="BOJ_12865.cpp" />
+    <ClCompile Include="BOJ_1495.cpp" />
+    <ClCompile Include="BOJ_15989.cpp" />
+    <ClCompile Include="BOJ_1890_1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ_9019.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="BOJ_9328.cpp">
+    <ClCompile Include="BOJ_1890_2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ_9376.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="BOJ_2293.cpp" />
+    <ClCompile Include="BOJ_2294.cpp" />
+    <ClCompile Include="BOJ_5557.cpp" />
+    <ClCompile Include="BOJ_9095.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
