@@ -56,5 +56,11 @@
     <ClCompile Include="SWEA_5656.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="NandM1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_2105.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
