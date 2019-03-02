@@ -1,12 +1,37 @@
 #include<iostream>
 #include<algorithm>
+#include<queue>
+#include<cstring>
 #define MAX 20
 using namespace std;
-int n, k, map[10][10], order[4][21], sel[MAX], ans = 0;
-int Winner, noEnter, wins[4], maxi;
-void fight(int w, int no, int R) {
+int n, k, map[10][10], blist[21], clist[21], sel[MAX], ans = 0, c[MAX];
+int Winner, noEnter, wins[4], maxi, bpivot, cpivot;
+bool Nopro = false;
+queue<int> q, bq, cq;
+void fight(int w, int no) {
 	//w와 no 대결
-	int t = map[order[w][R]][order[no][R]];
+	int f,se;
+	if (w == 1) {
+		if (q.empty()) {Nopro = true; return;}
+		f = q.front();
+		q.pop();
+	}
+	else{
+		if (w == 2) f = blist[bpivot++];
+		else f = clist[cpivot++];
+	}
+
+	if (no == 1) {
+		if (q.empty()) { Nopro = true; return; }
+		se = q.front();
+		q.pop();
+	}
+	else {
+		if (no == 2) se = blist[bpivot++];
+		else se = clist[cpivot++];
+	}
+
+	int t = map[f][se];
 	//w가 승자
 	if (t == 2) {
 		Winner = w;
@@ -28,11 +53,15 @@ void fight(int w, int no, int R) {
 void solve() {
 	// 1은 A, 2은 B, 3는 C
 	Winner = 1; noEnter = 2;
+	Nopro = false;
+	memset(wins, 0, sizeof(wins));
+	bpivot = 0; cpivot = 0;
 	for (int r = 0; r < maxi; r++) {
-		fight(Winner, noEnter,r);
+		fight(Winner, noEnter);
+		if (Nopro == true) return;
 		for (int x = 1; x <= 3; x++) {
-			if (wins[x] >= k && x == 1) {
-				ans = 1;
+			if (wins[x] >= k) {
+				if(x==1) ans = 1;
 				return;
 			}
 		}
@@ -41,38 +70,39 @@ void solve() {
 
 
 void go(int index) {
-	if (index == maxi) {
-		int cnt = 0;
-		for (int j = 1; j < maxi; j++) {
-			if (sel[j - 1] == sel[j]) cnt++;
-		}
-		/*if (cnt == 0) {
-			for (int j = 0; j < maxi; j++) cout << sel[j] << ' ';
-			cout << '\n';
-		}*/
-		
-		//손동작이 연속되지 않은 경우 solve한다.
-		if (cnt == 0) {
-			for (int j = 0; j < maxi; j++) order[1][j] = sel[j];
-			solve();
-		}
+	if (index == n) {
+		//가위,바위,보 인덱스를 큐에 저장
+		while (!q.empty()) { q.pop(); }
+		for (int j = 0; j < n; j++) q.push(sel[j]);
+		solve();
+		/*for (int j = 0; j < n; j++) cout << sel[j] << ' ';
+		cout << '\n';*/
 		return;
 	}
 	for (int i = 0; i < n; i++) {
+		if (c[i] == true) continue;
+		c[i] = true;
 		sel[index] = i + 1;
 		go(index + 1);	
+		c[i] = false;
 	}
 }
 
 
 int main() {
+	ios_base::sync_with_stdio(0); cin.tie(0);
 	cin >> n >> k;
 	for (int i = 1; i <= n; i++) for (int j = 1; j <= n; j++) cin >> map[i][j];
-	for (int i = 2; i < 4; i++) {
-		for (int j = 0; j < 20; j++) {
-			cin >> order[i][j];
+	
+	int temp;
+	for (int j = 0; j < 2; j++) {
+		for (int i = 0; i < 20; i++) {
+			cin >> temp;
+			if (j == 0) blist[i] = temp;
+			else clist[i] = temp;
 		}
 	}
+		
 	maxi = (3 * (k - 1) + 1);
 	go(0);
 	cout << ans;

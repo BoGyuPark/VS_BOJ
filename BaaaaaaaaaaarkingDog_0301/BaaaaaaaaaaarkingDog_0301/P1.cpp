@@ -87,6 +87,21 @@ void dfs(int index) {
 				//회전 + 섞은 후 bfs시작
 				int temp = bfs();
 				ans.push_back(temp);
+				/*if (temp == 18) {
+					cout << "Rotate" << '\n';
+					for (int i = 0; i < 5; i++) {
+						cout << a[i] << ' ';
+					}
+					cout << '\n';
+
+					cout << "floor" << '\n';
+					for (int i = 0; i < 5; i++) {
+						cout << arr[i] << ' ';
+					}
+					cout << '\n';
+
+					cout << "\n\n\n";
+				}*/
 			}
 		} while (next_permutation(arr,arr+5));
 
