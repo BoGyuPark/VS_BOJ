@@ -1,58 +1,84 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int T, TC, n;
-int dx[] = { -1,1,0,0 };
-int dy[] = { 0,0,-1,1 };
-typedef struct atom {
-	int xp, yp, d, e;
+int Test, T, n;
+int dy[] = { 1,-1,0,0 };
+int dx[] = { 0,0,-1,1 };
+typedef struct info {
+	int x, y, dir, k;
 };
 int main() {
 	ios_base::sync_with_stdio(0); cin.tie(0);
-	cin >> TC;
-	for (T = 1; T <= TC; T++) {
+	cin >> Test;
+	for (T = 1; T <= Test; T++) {
 		cin >> n;
-		vector<atom> v;
+		int t1, t2, t3, t4;
+		vector<info> now(n), prev(n);
 		for (int i = 0; i < n; i++) {
-			int xpos, ypos, dir, k;
-			cin >> xpos >> ypos >> dir >> k;
-			xpos += 1000;
-			ypos = -ypos; ypos += 1000;
-			v.push_back({ ypos,xpos,dir,k });
+			cin >> t1 >> t2 >> t3 >> t4;
+			now[i] = { t1,t2,t3,t4 };
 		}
-		int Limit = 2000, ans = 0;
-		while (Limit--) {
-			//한 번씩 이동을 시킨다. (좌표만)
-			int cnt = 0;
-			for (int i = 0; i < v.size(); i++) {
-				int x = v[i].xp, y = v[i].yp, dir = v[i].d, energy = v[i].e;
-				if (energy == 0) {cnt++; continue;}
-				int nx = x + dx[dir], ny = y + dy[dir];
-				if (nx < 0 || ny < 0 || nx > 2000 || ny > 2000) continue;
-				v[i].xp = nx; v[i].yp = ny;
+		int ans = 0, t = 4003;
+		while (t--) {
+			//현재의 좌표를 prev로 복사
+			prev = now;
+			//각 좌표를 새로운 좌표로 이동 (한번씩 이동)
+			for (int i = 0; i < n; i++) {
+				if (now[i].k == -1) continue;
+				now[i].x += dx[now[i].dir];
+				now[i].y += dy[now[i].dir];
 			}
-			if (cnt == v.size()) break;
-			//충돌검사
-			int c[1001] = { 0, };
-			for (int i = 0; i < v.size(); i++) {
-				int temp = v[i].e;
-				for (int j = i + 1; j < v.size(); j++) {
-					//원자끼리 좌표가 같아 충돌한 경우.
-					if (c[i] == true) continue;
-					if (v[i].xp == v[j].xp && v[i].yp == v[j].yp) {
-						temp += v[j].e;
-						c[j] = true;
-						//원자를 없애야한다.
-						v[j].e = 0;
+
+			//1.5초 후 충돌하였는지 체크한다.
+			for (int i = 0; i < n; i++) {
+				if (now[i].k == -1) continue;
+				//기준이 i번째에 있는 좌표
+				int x = now[i].x, y = now[i].y;
+				int collision = now[i].k;
+				bool col = false;
+				for (int j = 0; j < n; j++) {
+					if (i == j || now[j].k == -1) continue;
+					//1.5초 후에 충돌하는 경우
+					if (x == prev[j].x && y == prev[j].y) {
+						if (now[j].x == prev[i].x && now[j].y == prev[i].y) {
+							collision += now[j].k;
+							now[j].k = -1;
+							col = true;
+						}
 					}
 				}
-				//충돌한경우
-				if (temp != v[i].e) {
-					ans += temp;
-					v[i].e = 0;
+				//해당좌표에서 충돌이 일어난경우 원자를 없앤다.
+				if (col) {
+					now[i].k = -1;
+					ans += collision;
 				}
 			}
+			//충돌하였는지 체크한다.
+			for (int i = 0; i < n; i++) {
+				if (now[i].k == -1) continue;
+				//기준이 i번째에 있는 좌표
+				int x = now[i].x, y = now[i].y;
+				int collision = now[i].k;
+				bool col = false;
+				for (int j = 0; j < n; j++) {
+					if (i == j || now[j].k == -1) continue;
+					//충돌했다!
+					if (x == now[j].x && y == now[j].y) {
+						collision += now[j].k;
+						//충돌당한 좌표의 원자는 -1로 변경
+						now[j].k = -1;
+						col = true;
+					}
+				}
+				//해당좌표에서 충돌이 일어난경우 원자를 없앤다.
+				if (col) {
+					now[i].k = -1;
+					ans += collision;
+				}
+			}
+
 		}
 		cout << '#' << T << ' ' << ans << '\n';
 	}
 }
+
