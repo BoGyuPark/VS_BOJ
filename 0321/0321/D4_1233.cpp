@@ -21,21 +21,15 @@ int main() {
 				string t = ptr;
 				if (num == 0) {
 					//첫번째가 숫자이고 뒤에 숫자가 한개라도 있으면 아웃
-					if (t == "-" || t == "+" || t == "*" || t == "/") {
-						
-					}
-					else {
+					if (t != "-" && t != "+" && t != "*" && t != "/")
 						numflag = true;
-					}
 					num++;
 				}
 				//cout << t;
 				ptr = strtok(NULL, " ");
 				cnt++;
 			}
-			if (numflag && (num < cnt)) {
-				ans = 0;
-			}
+			if (numflag && (num < cnt)) ans = 0;
 		}
 		cout << '#' << tc << ' ' << ans << '\n';
 	}
