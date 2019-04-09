@@ -1,11 +1,11 @@
 #include<iostream>
 using namespace std;
-int a[10][10], checkNum[] = { 5,5,5,5,5 }, remainCnt = 0;
+int a[10][10], remainCnt = 0;
 int sx, sy, ans;
 //들어간다면 도형을 삽입 num+1로 삽입
 void InsertSq(int i, int j, int num, int value) {
-	for (int x = i; x < i + num; x++) 
-		for (int y = j; y < j + num; y++) 
+	for (int x = i; x < i + num; x++)
+		for (int y = j; y < j + num; y++)
 			a[x][y] = value + 1;
 }
 //num * num 의 도형이 들어가는 지 체크
@@ -40,6 +40,7 @@ pair<int, int> findPos() {
 }
 
 void dfs(int index, int i, int j, int sq1, int sq2, int sq3, int sq4, int sq5, int reCnt) {
+	if (ans <= 25 - sq1 - sq2 - sq3 - sq4 - sq5) return;
 	if (index == 25 || reCnt == 0) {
 		int sum = 0;
 		sum = 25 - sq1 - sq2 - sq3 - sq4 - sq5;
@@ -63,7 +64,8 @@ void dfs(int index, int i, int j, int sq1, int sq2, int sq3, int sq4, int sq5, i
 		if (checkInsert(i, j, 2)) {
 			//도형을 놓을 다음위치를 찾는다.
 			int nx, ny;
-			nx = findPos().first, ny = findPos().second;
+			pair<int, int> p = findPos();
+			nx = p.first, ny = p.second;
 			dfs(index + 1, nx, ny, sq1, sq2 - 1, sq3, sq4, sq5, reCnt - 4);
 			//다시 복구시킨다.
 			InsertSq(i, j, 2, 0);
@@ -74,7 +76,8 @@ void dfs(int index, int i, int j, int sq1, int sq2, int sq3, int sq4, int sq5, i
 		if (checkInsert(i, j, 3)) {
 			//도형을 놓을 다음위치를 찾는다.
 			int nx, ny;
-			nx = findPos().first, ny = findPos().second;
+			pair<int, int> p = findPos();
+			nx = p.first, ny = p.second;
 			dfs(index + 1, nx, ny, sq1, sq2, sq3 - 1, sq4, sq5, reCnt - 9);
 			//다시 복구시킨다.
 			InsertSq(i, j, 3, 0);
@@ -85,18 +88,20 @@ void dfs(int index, int i, int j, int sq1, int sq2, int sq3, int sq4, int sq5, i
 		if (checkInsert(i, j, 4)) {
 			//도형을 놓을 다음위치를 찾는다.
 			int nx, ny;
-			nx = findPos().first, ny = findPos().second;
-			dfs(index + 1, nx, ny, sq1, sq2, sq3, sq4 - 1 , sq5, reCnt - 16);
+			pair<int, int> p = findPos();
+			nx = p.first, ny = p.second;
+			dfs(index + 1, nx, ny, sq1, sq2, sq3, sq4 - 1, sq5, reCnt - 16);
 			//다시 복구시킨다.
 			InsertSq(i, j, 4, 0);
 		}
 	}
 
-	if (sq1 > 0) {
+	if (sq5 > 0) {
 		if (checkInsert(i, j, 5)) {
 			//도형을 놓을 다음위치를 찾는다.
 			int nx, ny;
-			nx = findPos().first, ny = findPos().second;
+			pair<int, int> p = findPos();
+			nx = p.first, ny = p.second;
 			dfs(index + 1, nx, ny, sq1, sq2, sq3, sq4, sq5 - 1, reCnt - 25);
 			//다시 복구시킨다.
 			InsertSq(i, j, 5, 0);
@@ -106,7 +111,7 @@ void dfs(int index, int i, int j, int sq1, int sq2, int sq3, int sq4, int sq5, i
 
 int main() {
 	ios_base::sync_with_stdio(0); cin.tie(0);
-	for (int i = 0; i < 10; i++) 
+	for (int i = 0; i < 10; i++)
 		for (int j = 0; j < 10; j++) {
 			cin >> a[i][j];
 			if (a[i][j] == 1) remainCnt++;
