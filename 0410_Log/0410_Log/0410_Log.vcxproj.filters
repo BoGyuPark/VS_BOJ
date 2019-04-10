@@ -20,37 +20,16 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="17135_P1_캐슬디펜스.cpp">
+    <ClCompile Include="16932_모양만들기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="17136_P2_색종이붙이기.cpp">
+    <ClCompile Include="5653_줄기세포배양.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="16235_나무재테크.cpp">
+    <ClCompile Include="5648_원자소멸시뮬레이션.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="16236_아기상어_구조체.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2105_디저트카페.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2383_점심식사시간.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="16954_움직이는미로탈출.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="16920_확장게임.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="2931_가스관.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="1938_통나무옮기기.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="5644_무선충전.cpp">
+    <ClCompile Include="16918_봄버맨.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

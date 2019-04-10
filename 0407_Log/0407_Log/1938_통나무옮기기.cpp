@@ -68,7 +68,6 @@ int main() {
 					//중심의 왼쪽과 오른쪽이 만족할 경우
 					if (ny - 1 >= 0 && a[nx][ny - 1] != '1' &&
 						(ny + 1 < n && a[nx][ny + 1] != '1')) {
-						//
 						q.push({ nx,ny,nowdir });
 						c[nx][ny][nowdir] = c[x][y][nowdir] + 1;
 					}
