@@ -18,6 +18,9 @@
     <ClCompile Include="BOJ_14717.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="0626_BOJ_14927.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
