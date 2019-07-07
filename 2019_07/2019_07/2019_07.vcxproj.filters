@@ -13,25 +13,22 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\02">
+      <UniqueIdentifier>{46a6c9e0-eb1f-4451-acbe-a8c3b988f2aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\07">
+      <UniqueIdentifier>{0f61696e-b2bf-40d6-96db-b20bb47ce3c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BOJ_14717.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="BOJ_1920.cpp">
+      <Filter>소스 파일\02</Filter>
     </ClCompile>
-    <ClCompile Include="0626_BOJ_14927.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="BOJ_10816.cpp">
+      <Filter>소스 파일\02</Filter>
     </ClCompile>
-    <ClCompile Include="0627_BOJ_14939.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="0628_BOJ_17260.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="0630_BOJ_2151.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="BOJ_0701.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="BOJ_3987.cpp">
+      <Filter>소스 파일\07</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
