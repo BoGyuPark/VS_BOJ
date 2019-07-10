@@ -63,6 +63,15 @@
     <ClCompile Include="BOJ_4179.cpp">
       <Filter>소스 파일\2주차\10</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ_3055.cpp">
+      <Filter>소스 파일\2주차\10</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1389.cpp">
+      <Filter>소스 파일\2주차\10</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2636.cpp">
+      <Filter>소스 파일\2주차\10</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
