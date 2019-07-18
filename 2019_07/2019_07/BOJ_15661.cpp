@@ -6,30 +6,33 @@ using namespace std;
 int n, arr[20][20];
 vector<int> st, li;
 int ans = 2147483647;
+int stSum = 0, liSum = 0;
 void go(int index) {
 	if (index == n) {
-		int stSum = 0, liSum = 0;
-		for (int a = 0; a < st.size(); a++) {
-			for (int b = a + 1; b < st.size(); b++) {
-				stSum += (arr[st[a]][st[b]]+ arr[st[b]][st[a]]);
-			}
-		}
-		for (int a = 0; a < li.size(); a++) {
-			for (int b = a + 1; b < li.size(); b++) {
-				liSum += (arr[li[a]][li[b]] + arr[li[b]][li[a]]);
-			}
-		}
 		ans = min(ans, abs(stSum - liSum));
+		return;
 	}
 	if (st.size() < n - 1) {
+		for (int a = 0; a < st.size(); a++) {
+			stSum += (arr[st[a]][index] + arr[index][st[a]]);
+		}
 		st.push_back(index);
 		go(index + 1);
+		for (int a = 0; a < st.size() - 1; a++) {
+			stSum -= (arr[st[a]][index] + arr[index][st[a]]);
+		}
 		st.pop_back();
 	}
 	
 	if (li.size() < n - 1) {
+		for (int a = 0; a < li.size(); a++) {
+			liSum += (arr[li[a]][index] + arr[index][li[a]]);
+		}
 		li.push_back(index);
 		go(index + 1);
+		for (int a = 0; a < li.size() - 1; a++) {
+			liSum -= (arr[li[a]][index] + arr[index][li[a]]);
+		}
 		li.pop_back();
 	}
 }
