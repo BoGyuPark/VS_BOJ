@@ -210,6 +210,12 @@
     <ClCompile Include="BOJ_1987.cpp">
       <Filter>소스 파일\3주차\18</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ_3085.cpp">
+      <Filter>소스 파일\3주차\19</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_12852.cpp">
+      <Filter>소스 파일\3주차\19</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
