@@ -1,72 +1,32 @@
 /*BOJ 9881 Ski Course Design*/
 #include<iostream>
 #include<algorithm>
-#include<math.h>
 using namespace std;
-int n, arr[1001];
+int n, arr[1001], ans;
 int main() {
 	ios_base::sync_with_stdio(0); cin.tie(0);
 	cin >> n;
 	for (int i = 0; i < n; i++) cin >> arr[i];
 	sort(arr, arr + n);
-	for (int i = 0; i < n; i++) cout << arr[i] << ' ';
-	cout << '\n';
+	ans = 2147483647;
+	for (int i = 0; i <= 100; i++) {
+		int start = i, end = i + 17;
+		int sum = 0;
+		for (int j = 0; j < n; j++) {
+			//기준 범위 안에 들어 온다면 패스
+			if (start <= arr[j] && arr[j] <= end) continue;
+			int dif;
 
-	int ans = 0;
-	while (true) {
-		int cnt = 0;
-		for (int i = 0; i < n; i++) {
-			int lowest = arr[i];
-			int maxDif = 0;
-			int maxDif_idx = 0;
-			for (int j = 0; j < n; j++) {
-				int highest = arr[j];
-				int dif = abs(highest - lowest);
-				if (maxDif < dif) {
-					maxDif = dif;
-					maxDif_idx = j;
-				}
+			if (arr[j] < start) {
+				dif = start - arr[j];
+				sum += dif * dif;
 			}
-			if (maxDif > 17) {
-				maxDif -= 17;
-				if (maxDif % 2 == 0) {
-					int temp = maxDif / 2;
-					ans += temp * temp * 2;
-					if (arr[i] < arr[maxDif_idx]) {
-						arr[i] += temp;
-						arr[maxDif_idx] -= temp;
-					}
-					else {
-						arr[i] -= temp;
-						arr[maxDif_idx] += temp;
-					}
-				}
-				else {
-					int t1 = ceil(maxDif / 2.0);
-					int t2 = (maxDif / 2);
-					ans += t1 * t1 + t2 * t2;
-
-					if (arr[i] < arr[maxDif_idx]) {
-						arr[i] += t1;
-						arr[maxDif_idx] -= t2;
-					}
-					else {
-						arr[i] -= t1;
-						arr[maxDif_idx] += t2;
-					}
-
-				}
+			else if (arr[j] > end) {
+				dif = arr[j] - end;
+				sum += dif * dif;
 			}
-			else {
-				cnt++;
-			}
-			/*for (int i = 0; i < n; i++) cout << arr[i] << ' ';
-			cout << '\n';*/
 		}
-		if (cnt == n) break;
+		ans = min(ans, sum);
 	}
-	for (int i = 0; i < n; i++) cout << arr[i] << ' ';
-			cout << '\n';
 	cout << ans;
-	
 }
