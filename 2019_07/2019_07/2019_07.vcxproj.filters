@@ -76,6 +76,9 @@
     <Filter Include="소스 파일\4주차\23">
       <UniqueIdentifier>{e4f71bbc-a66e-4ecd-b498-5d4ec06ad094}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\4주차\24">
+      <UniqueIdentifier>{307d913a-2884-4648-b634-cde730cf7dfb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_1920.cpp">
@@ -284,6 +287,9 @@
     </ClCompile>
     <ClCompile Include="BOJ_16569.cpp">
       <Filter>소스 파일\4주차\23</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16137.cpp">
+      <Filter>소스 파일\4주차\24</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
