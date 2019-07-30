@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\1주차">
+      <UniqueIdentifier>{64b37cd0-0ae5-4b09-b3c8-77a1f63cc5c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\1주차\0729">
+      <UniqueIdentifier>{989a1c1b-2244-4474-9af7-54502560efe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\1주차\0730">
+      <UniqueIdentifier>{f30630a2-4a9e-4982-a2a8-21fb074dd23f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BOJ_2206.cpp">
+      <Filter>소스 파일\1주차\0729</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_14442.cpp">
+      <Filter>소스 파일\1주차\0730</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16933.cpp">
+      <Filter>소스 파일\1주차\0730</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
