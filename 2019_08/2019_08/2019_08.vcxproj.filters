@@ -28,6 +28,12 @@
     <Filter Include="소스 파일\1주차\0804">
       <UniqueIdentifier>{9168fbf1-fe39-4bf8-8fdb-e6f4c3106d17}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\2주차">
+      <UniqueIdentifier>{168648f2-cc36-427d-a4d6-4b505966c44d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\2주차\0805">
+      <UniqueIdentifier>{fdab67bd-d04f-433d-a591-8db27df0ffc5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_2206.cpp">
@@ -62,6 +68,12 @@
     </ClCompile>
     <ClCompile Include="BOJ_11946.cpp">
       <Filter>소스 파일\1주차\0804</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16112.cpp">
+      <Filter>소스 파일\2주차\0805</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16196.cpp">
+      <Filter>소스 파일\2주차\0805</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
