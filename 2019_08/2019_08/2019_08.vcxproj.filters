@@ -216,6 +216,27 @@
     <ClCompile Include="BOJ_17070.cpp">
       <Filter>소스 파일\3주차\0816</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ_3987.cpp">
+      <Filter>소스 파일\3주차\0816</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16988.cpp">
+      <Filter>소스 파일\3주차\0816</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16922.cpp">
+      <Filter>소스 파일\3주차\0816</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16925.cpp">
+      <Filter>소스 파일\3주차\0816</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16938.cpp">
+      <Filter>소스 파일\3주차\0816</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16943.cpp">
+      <Filter>소스 파일\3주차\0816</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16945.cpp">
+      <Filter>소스 파일\3주차\0816</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
