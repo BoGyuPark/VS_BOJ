@@ -61,9 +61,6 @@
     <Filter Include="소스 파일\4주차">
       <UniqueIdentifier>{907de4b2-1acd-4e61-87e7-71a96505b632}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\4주차\NewFilter1">
-      <UniqueIdentifier>{a1ccccbf-d279-46b6-bc99-43fc14fa5f89}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\3주차\0816">
       <UniqueIdentifier>{67c9ad1b-b2fc-4554-9948-8b309c5d9541}</UniqueIdentifier>
     </Filter>
@@ -72,6 +69,12 @@
     </Filter>
     <Filter Include="소스 파일\3주차\0818">
       <UniqueIdentifier>{0c8a9e74-4462-4d0b-b288-34b3050566f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\4주차\0819">
+      <UniqueIdentifier>{a1ccccbf-d279-46b6-bc99-43fc14fa5f89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\4주차\0820">
+      <UniqueIdentifier>{0e541e07-c4c1-4088-95e9-cbf2eb558984}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +248,36 @@
     </ClCompile>
     <ClCompile Include="BOJ_16953.cpp">
       <Filter>소스 파일\3주차\0818</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_17135.cpp">
+      <Filter>소스 파일\4주차\0819</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16944.cpp">
+      <Filter>소스 파일\4주차\0819</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1759.cpp">
+      <Filter>소스 파일\4주차\0819</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_11723.cpp">
+      <Filter>소스 파일\4주차\0819</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_15658.cpp">
+      <Filter>소스 파일\4주차\0819</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16958.cpp">
+      <Filter>소스 파일\4주차\0819</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16951.cpp">
+      <Filter>소스 파일\4주차\0819</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16968.cpp">
+      <Filter>소스 파일\4주차\0819</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_17085.cpp">
+      <Filter>소스 파일\4주차\0819</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_17144.cpp">
+      <Filter>소스 파일\4주차\0820</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
