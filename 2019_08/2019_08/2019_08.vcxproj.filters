@@ -76,6 +76,9 @@
     <Filter Include="소스 파일\4주차\0820">
       <UniqueIdentifier>{0e541e07-c4c1-4088-95e9-cbf2eb558984}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\4주차\0821">
+      <UniqueIdentifier>{7cf500ef-2243-4e90-8929-c7716b2b636a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_2206.cpp">
@@ -277,6 +280,27 @@
       <Filter>소스 파일\4주차\0819</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_17144.cpp">
+      <Filter>소스 파일\4주차\0820</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_17143.cpp">
+      <Filter>소스 파일\4주차\0820</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_17088.cpp">
+      <Filter>소스 파일\4주차\0820</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16937.cpp">
+      <Filter>소스 파일\4주차\0820</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16939.cpp">
+      <Filter>소스 파일\4주차\0820</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1252.cpp">
+      <Filter>소스 파일\4주차\0820</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_5568.cpp">
+      <Filter>소스 파일\4주차\0820</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1059.cpp">
       <Filter>소스 파일\4주차\0820</Filter>
     </ClCompile>
   </ItemGroup>
