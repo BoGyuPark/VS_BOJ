@@ -291,9 +291,6 @@
     <ClCompile Include="BOJ_16937.cpp">
       <Filter>소스 파일\4주차\0820</Filter>
     </ClCompile>
-    <ClCompile Include="BOJ_16939.cpp">
-      <Filter>소스 파일\4주차\0820</Filter>
-    </ClCompile>
     <ClCompile Include="BOJ_1252.cpp">
       <Filter>소스 파일\4주차\0820</Filter>
     </ClCompile>
@@ -302,6 +299,18 @@
     </ClCompile>
     <ClCompile Include="BOJ_1059.cpp">
       <Filter>소스 파일\4주차\0820</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16939.cpp">
+      <Filter>소스 파일\4주차\0821</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_11559.cpp">
+      <Filter>소스 파일\4주차\0821</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_17281.cpp">
+      <Filter>소스 파일\4주차\0821</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16235.cpp">
+      <Filter>소스 파일\4주차\0821</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
