@@ -97,6 +97,9 @@
     <Filter Include="소스 파일\5주차\0827">
       <UniqueIdentifier>{f5f492c5-cd0d-476b-888e-939cddfdc42c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\5주차\0828">
+      <UniqueIdentifier>{c74c74a5-92f2-4237-9caf-84f4ec40ef27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_2206.cpp">
@@ -398,6 +401,15 @@
     </ClCompile>
     <ClCompile Include="BOJ_3048.cpp">
       <Filter>소스 파일\5주차\0827</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_1220.cpp">
+      <Filter>소스 파일\5주차\0828</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_1215.cpp">
+      <Filter>소스 파일\5주차\0828</Filter>
+    </ClCompile>
+    <ClCompile Include="P1_shuffle.cpp">
+      <Filter>소스 파일\5주차\0828</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
