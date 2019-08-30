@@ -100,6 +100,9 @@
     <Filter Include="소스 파일\5주차\0828">
       <UniqueIdentifier>{c74c74a5-92f2-4237-9caf-84f4ec40ef27}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\5주차\0829">
+      <UniqueIdentifier>{b986130b-1b17-4c5b-af34-d15b0a2048b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_2206.cpp">
@@ -402,14 +405,38 @@
     <ClCompile Include="BOJ_3048.cpp">
       <Filter>소스 파일\5주차\0827</Filter>
     </ClCompile>
-    <ClCompile Include="SWEA_1220.cpp">
-      <Filter>소스 파일\5주차\0828</Filter>
-    </ClCompile>
     <ClCompile Include="SWEA_1215.cpp">
       <Filter>소스 파일\5주차\0828</Filter>
     </ClCompile>
     <ClCompile Include="P1_shuffle.cpp">
       <Filter>소스 파일\5주차\0828</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_1220.cpp">
+      <Filter>소스 파일\5주차\0829</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_8444.cpp">
+      <Filter>소스 파일\5주차\0829</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_2105.cpp">
+      <Filter>소스 파일\5주차\0829</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_17142.cpp">
+      <Filter>소스 파일\5주차\0829</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_17140.cpp">
+      <Filter>소스 파일\5주차\0829</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_14888.cpp">
+      <Filter>소스 파일\5주차\0829</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_4008.cpp">
+      <Filter>소스 파일\5주차\0829</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_14503.cpp">
+      <Filter>소스 파일\5주차\0829</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_5644.cpp">
+      <Filter>소스 파일\5주차\0829</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
