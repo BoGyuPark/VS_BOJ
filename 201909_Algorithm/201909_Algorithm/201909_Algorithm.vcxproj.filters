@@ -13,22 +13,67 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\0830">
+      <UniqueIdentifier>{a8cbdd64-b3cd-4ad2-9f81-ec1c04e001b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0901">
+      <UniqueIdentifier>{e45ff170-9fe1-4d6f-b3c7-08d4b0024617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\못품">
+      <UniqueIdentifier>{9881fa58-0eb6-4113-946f-90c311075aa7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BOJ_2667.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="BOJ_2660.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="BOJ_2636.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="BOJ_1268.cpp">
+      <Filter>소스 파일\0830</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_2303.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\0830</Filter>
     </ClCompile>
-    <ClCompile Include="BOJ_1268.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="BOJ_2636.cpp">
+      <Filter>소스 파일\0830</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2660.cpp">
+      <Filter>소스 파일\0830</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2667.cpp">
+      <Filter>소스 파일\0830</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2302.cpp">
+      <Filter>소스 파일\0901</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2573.cpp">
+      <Filter>소스 파일\0901</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2468.cpp">
+      <Filter>소스 파일\0901</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_13301.cpp">
+      <Filter>소스 파일\0901</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_14697.cpp">
+      <Filter>소스 파일\0901</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2591.cpp">
+      <Filter>소스 파일\못품</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_13302.cpp">
+      <Filter>소스 파일\못품</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2549.cpp">
+      <Filter>소스 파일\못품</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2589.cpp">
+      <Filter>소스 파일\0901</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2606.cpp">
+      <Filter>소스 파일\0901</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2607.cpp">
+      <Filter>소스 파일\못품</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2629.cpp">
+      <Filter>소스 파일\0901</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
