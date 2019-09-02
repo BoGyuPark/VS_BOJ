@@ -13,15 +13,16 @@ int isPossible() {
 	for (int j = 0; j < 26; j++) {
 		if (pivotNumCnt[j] != cmpNumCnt[j]) {
 			difCnt = pivotNumCnt[j] - cmpNumCnt[j];
-			if (difCnt > 1) return -1;
+			if (abs(difCnt) > 1) return -1;
 			else if (difCnt == 1) lackCnt++;
 			else if (difCnt == -1) remainCnt++;
 		}
 	}
 	
 	if (lackCnt == 1 && remainCnt == 1) return 2;
-	if (lackCnt == 1 && remainCnt == 0 || 
-		lackCnt == 0 && remainCnt == 1) return 1;
+	if (lackCnt == 1 && remainCnt == 0 || lackCnt == 0 && remainCnt == 1) return 1;
+	if (lackCnt == 0 && remainCnt == 0) return 3;
+	return -1;
 }
 int main() {
 	ios_base::sync_with_stdio(0); cin.tie(0);
@@ -54,7 +55,8 @@ int main() {
 
 		//문자의 길이가 같을때, 문자 바꾸기
 		if (s.size() == t.size()) {
-			if (isPossible() == 2) ans++;	
+			if (isPossible() == 2) ans++;
+			if (isPossible() == 3) ans++;	//문자열길이같고 순서만 다를경우
 		}
 		//문자의 길이 차이가 1인 경우, 문자 추가 or 빼기
 		else {
