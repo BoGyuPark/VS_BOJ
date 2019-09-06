@@ -25,6 +25,12 @@
     <Filter Include="소스 파일\0902">
       <UniqueIdentifier>{23a0ad35-a796-4fa5-a669-ea854d3d38f0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\0903">
+      <UniqueIdentifier>{d536ccce-1eff-4d18-84c4-bd3da90ac10e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\0906">
+      <UniqueIdentifier>{18b4ffe9-0820-4efe-ab6f-d39067eaf54a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_1268.cpp">
@@ -92,6 +98,39 @@
     </ClCompile>
     <ClCompile Include="SWEA_3234.cpp">
       <Filter>소스 파일\못품</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_15971.cpp">
+      <Filter>소스 파일\0903</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2529.cpp">
+      <Filter>소스 파일\0903</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1592.cpp">
+      <Filter>소스 파일\0906</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1726.cpp">
+      <Filter>소스 파일\0906</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_4600.cpp">
+      <Filter>소스 파일\0906</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1347.cpp">
+      <Filter>소스 파일\0906</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1331.cpp">
+      <Filter>소스 파일\0906</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1194.cpp">
+      <Filter>소스 파일\0906</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_2383.cpp">
+      <Filter>소스 파일\0906</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_17406.cpp">
+      <Filter>소스 파일\0906</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16926.cpp">
+      <Filter>소스 파일\0906</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
