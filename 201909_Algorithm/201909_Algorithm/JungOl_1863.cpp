@@ -29,6 +29,7 @@ int main() {
 		int p = getParent(i);
 		cnt[p]++;
 	}
+
 	for (int i = 1; i <= n; i++) if (cnt[i] > 0) ans++;
 	cout << ans;
 }
