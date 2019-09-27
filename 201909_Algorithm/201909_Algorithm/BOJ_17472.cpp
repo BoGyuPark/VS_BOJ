@@ -4,7 +4,7 @@
 #include<vector>
 #include<algorithm>
 using namespace std;
-int n, m, map[11][11], c[11][11], dist[7][7], checkRoad[7][7], parent[7];
+int n, m, map[11][11], c[11][11], parent[7];
 int dx[] = { 0,0,1,-1 };
 int dy[] = { 1,-1,0,0 };
 queue<pair<int, int>> q;
