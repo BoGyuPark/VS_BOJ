@@ -1,31 +1,55 @@
-/*BOJ 3015 오아시스 재결합*/
-//스택을 사용하자아!
-#include<iostream>
-#include<stack>
+#include <iostream>
+#include <stack>
 using namespace std;
-int n, t;
-long long ans;
-int main() {
-	ios_base::sync_with_stdio(0); cin.tie(0);
-	cin >> n;
-	cin >> t;
-	stack<int> s; s.push(t);
-	for (int i = 1; i < n; i++) {
-		cin >> t;
-		if (s.top() < t) {
-			ans += s.size();
 
-			while (true) {
-				if (s.empty()) break;
-				if (s.top() > t) break;
-				s.pop();
+#define LIM 99999999999
+int N;
+long long ans, cur, beforeCnt, beforeNum;
+stack<long long> st;
+
+void calc() {
+	beforeNum = beforeCnt = 0;
+
+	while (1) {
+		int flag = (st.top() == LIM ? 2 : 0) + (cur == LIM ? 1 : 0);
+		if (st.top() < cur) {
+			if (beforeNum != st.top()) {
+				ans += beforeCnt * (beforeCnt - 1) / 2;
+				switch (flag) {
+				case 0: ans += 2 * beforeCnt; break;
+				case 1: case 2: ans += beforeCnt; break;
+				case 3: break;
+				}
+
+				beforeNum = st.top();
+				beforeCnt = 1;
 			}
-			s.push(t);
+			else beforeCnt++;
+			st.pop();
 		}
 		else {
-			ans += s.size();
-			s.push(t);
+			ans += beforeCnt * (beforeCnt - 1) / 2;
+			switch (flag) {
+			case 0: ans += 2 * beforeCnt; break;
+			case 2: ans += beforeCnt; break;
+			default: break;
+			}
+			break;
 		}
 	}
-	cout << ans;
+	st.push(cur);
+}
+
+int main() {
+	cin.sync_with_stdio(false); cin.tie(NULL);
+	cin >> N;
+	st.push(LIM);
+	while (N--) {
+		cin >> cur;
+		calc();
+	}
+	cur = LIM;
+	calc();
+
+	cout << ans << '\n';
 }
