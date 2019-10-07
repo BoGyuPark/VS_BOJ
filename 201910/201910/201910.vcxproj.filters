@@ -28,6 +28,9 @@
     <Filter Include="소스 파일\1005">
       <UniqueIdentifier>{d6aae343-c641-4e91-aa90-c6e0fa42d2f6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\1006">
+      <UniqueIdentifier>{1ab19805-7789-484f-a137-ce6c2040b8a0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_2437.cpp">
@@ -93,9 +96,6 @@
     <ClCompile Include="BOJ_5719.cpp">
       <Filter>소스 파일\1004</Filter>
     </ClCompile>
-    <ClCompile Include="BOJ_12100.cpp">
-      <Filter>소스 파일\1005</Filter>
-    </ClCompile>
     <ClCompile Include="BOJ_14890.cpp">
       <Filter>소스 파일\1005</Filter>
     </ClCompile>
@@ -108,20 +108,38 @@
     <ClCompile Include="BOJ_2805.cpp">
       <Filter>소스 파일\1005</Filter>
     </ClCompile>
-    <ClCompile Include="BOJ_2110.cpp">
-      <Filter>소스 파일\1005</Filter>
-    </ClCompile>
-    <ClCompile Include="BOJ_1654.cpp">
-      <Filter>소스 파일\1005</Filter>
-    </ClCompile>
     <ClCompile Include="BOJ_6236.cpp">
-      <Filter>소스 파일\1005</Filter>
-    </ClCompile>
-    <ClCompile Include="BOJ_2343.cpp">
       <Filter>소스 파일\1005</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_2512.cpp">
       <Filter>소스 파일\1005</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2343.cpp">
+      <Filter>소스 파일\1006</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2110.cpp">
+      <Filter>소스 파일\1006</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1654.cpp">
+      <Filter>소스 파일\1006</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_15686.cpp">
+      <Filter>소스 파일\1006</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16234.cpp">
+      <Filter>소스 파일\1006</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16236.cpp">
+      <Filter>소스 파일\1006</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16235.cpp">
+      <Filter>소스 파일\1006</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_13460.cpp">
+      <Filter>소스 파일\1006</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_12100.cpp">
+      <Filter>소스 파일\1006</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

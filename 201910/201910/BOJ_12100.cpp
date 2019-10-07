@@ -5,122 +5,65 @@ using namespace std;
 int n, map[21][21], cpy[21][21], sel[6], ans;
 int dx[] = { -1,1,0,0 };
 int dy[] = { 0,0,-1,1 };
-void upAndDown(int dir) {
-	if (dir == 0) {
-		//위로
+void moveBoard(int rowFlag, int start, int op) {
+	if (rowFlag) {
 		for (int j = 0; j < n; j++) {
 			int emptyCnt = 0;
-			for (int i = 0; i < n; i++) {
+			int i = start;
+			while (0 <= i &&  i < n) {
 				if (map[i][j] == 0) emptyCnt++;
-				else swap(map[i][j], map[i - emptyCnt][j]);
+				else swap(map[i][j], map[i + emptyCnt * op][j]);
+				i += (op*-1);
 			}
 		}
 	}
 	else {
-		//아래로
-		for (int j = 0; j < n; j++) {
+		for (int i = 0; i < n; i++) {
 			int emptyCnt = 0;
-			for (int i = n - 1; i >= 0; i--) {
+			int j = start;
+			while (0 <= j && j < n) {
 				if (map[i][j] == 0) emptyCnt++;
-				else swap(map[i][j], map[i + emptyCnt][j]);
+				else swap(map[i][j], map[i][j + emptyCnt * op]);
+				j += (op*-1);
 			}
 		}
 	}
 }
 
-void lefeAndRight(int dir) {
-	if (dir == 2) {
-		//왼쪽으로
-		for (int i = 0; i < n; i++) {
-			int emptyCnt = 0;
-			for (int j = 0; j < n; j++) {
-				if (map[i][j] == 0) emptyCnt++;
-				else swap(map[i][j], map[i][j - emptyCnt]);
+void unionBlock(int rowFlag, int value, int s, int e, int op) {
+	if (rowFlag) {
+		for (int j = 0; j < n; j++) {
+			int i = value;
+			while (s <= i && i < e) {
+				if (map[i][j] == map[i + op][j]) {
+					map[i][j] += map[i + op][j];
+					map[i + op][j] = 0;
+				}
+				i += op;
 			}
 		}
 	}
 	else {
-		//오른쪽으로
 		for (int i = 0; i < n; i++) {
-			int emptyCnt = 0;
-			for (int j = n-1; j >=0 ; j--) {
-				if (map[i][j] == 0) emptyCnt++;
-				else swap(map[i][j], map[i][j + emptyCnt]);
+			int j = value;
+			while (s <= j && j < e) {
+				if (map[i][j] == map[i][j + op]) {
+					map[i][j] += map[i][j + op];
+					map[i][j + op] = 0;
+				}
+				j += op;
 			}
 		}
 	}
 }
 
-void unionBlock(int dir) {
-	if (dir == 0) {
-		for (int j = 0; j < n; j++) {
-			for (int i = 0; i < n - 1; i++) {
-				if (map[i][j] == map[i + 1][j]) {
-					map[i][j] += map[i + 1][j];
-					map[i + 1][j] = 0;
-				}
-			}
-		}
-	}
-	else if (dir == 1) {
-		for (int j = 0; j < n; j++) {
-			for (int i = n - 1; i > 0; i--) {
-				if (map[i][j] == map[i - 1][j]) {
-					map[i][j] += map[i - 1][j];
-					map[i - 1][j] = 0;
-				}
-			}
-		}
-	}
-	else if (dir == 2) {
-		//왼쪽으로 합쳐
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n - 1; j++) {
-				if (map[i][j] == map[i][j + 1]) {
-					map[i][j] += map[i][j + 1];
-					map[i][j + 1] = 0;
-				}
-			}
-		}
-	}
-	else {
-		//오른쪽으로
-		for (int i = 0; i < n; i++) {
-			for (int j = n - 1; j > 0; j--) {
-				if (map[i][j] == map[i][j - 1]) {
-					map[i][j] += map[i][j - 1];
-					map[i][j - 1] = 0;
-				}
-			}
-		}
-	}
-}
-
-void printMap() {
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			cout << map[i][j] << ' ';
-		}
-		cout << '\n';
-	}
-	cout << '\n';
-}
 void simulate() {
 	for (int i = 0; i < 5; i++) {
 		int dir = sel[i];
-		if (dir <= 1) {
-			//방향으로 기울이기
-			upAndDown(dir);
-			//합치기
-			unionBlock(dir);
-			//다시 방향으로 기울이기
-			upAndDown(dir);
-		}
-		else {
-			lefeAndRight(dir);
-			unionBlock(dir);
-			lefeAndRight(dir);
-		}
+		if (dir == 0) moveBoard(1, 0, -1), unionBlock(1,0,0,n-1,1), moveBoard(1, 0, -1);
+		else if (dir == 1) moveBoard(1, n - 1, 1), unionBlock(1,n-1,1,n,-1), moveBoard(1, n - 1, 1);
+		else if (dir == 2) moveBoard(0, 0, -1), unionBlock(0,0,0,n-1,1), moveBoard(0, 0, -1);
+		else moveBoard(0, n - 1, 1), unionBlock(0,n-1,1,n,-1), moveBoard(0, n - 1, 1);
 	}
 }
 
