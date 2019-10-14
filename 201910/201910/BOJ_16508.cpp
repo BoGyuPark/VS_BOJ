@@ -2,58 +2,47 @@
 #include<iostream>
 #include<string>
 #include<vector>
-#include<set>
 #include<algorithm>
 using namespace std;
+int n, sel[17], targetAlpha[32], c[17], ans;
 string T;
 struct info {
 	int cost;
 	string name;
 	int alpha[33];
-	bool isAlive;
 };
-bool cmp(info a, info b) {
-	return a.cost < b.cost;
-}
-int n, sel[17], targetAlpha[32], ans;
 vector<info> v;
-set<int> se;
-void simulate() {
-	int remainCnt = T.size();
+void go(int remainCnt, int Sum) {
+	if (remainCnt == 0) {
+		ans = min(ans, Sum);
+		return;
+	}
 
-	for (int Total = 0; Total < n; Total++) {
-		int maxiIdx = -1, maxi = 0;
-		for (int i = 0; i < v.size(); i++) {
-			int sameCnt = 0;
-			if (!v[i].isAlive) continue;
+	for (int i = 0; i < v.size(); i++) {
+		if (c[i]) continue;
+		int sameCnt = 0;
+		int check[33] = { 0, };
+		for (int j = 0; j < T.size(); j++) {
+			if (v[i].alpha[T[j] - 'A'] > 0 && targetAlpha[T[j] - 'A'] > 0) {
+				targetAlpha[T[j] - 'A']--;
+				v[i].alpha[T[j] - 'A']--;
+				check[T[j] - 'A']++;
+				sameCnt++;
+			}
+		}
+
+		if (sameCnt > 0) {
+			c[i] = true;
+			go(remainCnt - sameCnt, Sum + v[i].cost);
 			for (int j = 0; j < 32; j++) {
-				if (targetAlpha[j] == 0) continue;
-				int dif = v[i].alpha[j] - targetAlpha[j];
-				if (dif >= 0) {
-					sameCnt += targetAlpha[j];
-				}
+				targetAlpha[j] += check[j];
+				v[i].alpha[j] += check[j];
 			}
-
-			if (maxi < sameCnt) {
-				maxi = sameCnt;
-				maxiIdx = i;
-			}
+			c[i] = false;
 		}
-
-		if (maxiIdx != -1) {
-			ans += v[maxiIdx].cost;
-			v[maxiIdx].isAlive = false;
-			string t = v[maxiIdx].name;
-			for (int j = 0; j < t.size(); j++) {
-				if (targetAlpha[t[j] - 'A'] > 0) {
-					targetAlpha[t[j] - 'A']--;
-					remainCnt--;
-				}
-			}
-		}
-		if (remainCnt == 0) return;
 	}
 }
+
 int main() {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 	cin >> T >> n;
@@ -69,11 +58,9 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		string s = v[i].name;
 		for (int j = 0; j < s.size(); j++) v[i].alpha[s[j] - 'A']++;
-		v[i].isAlive = true;
 	}
-	sort(v.begin(), v.end(),cmp);
-	ans = 0;
-	simulate();
-	if (ans == 0) ans = -1;
+	ans = 2147483647;
+	go(T.size(),0);
+	if (ans == 2147483647) ans = -1;
 	cout << ans;
 }
