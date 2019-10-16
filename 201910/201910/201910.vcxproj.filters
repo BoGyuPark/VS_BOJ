@@ -40,6 +40,9 @@
     <Filter Include="소스 파일\1014">
       <UniqueIdentifier>{94e8bb61-7e2d-47c8-8970-3b8b89a7fc37}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\1015">
+      <UniqueIdentifier>{6897c7ef-68fb-4a19-b35c-c257aaf5bbec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_2437.cpp">
@@ -206,6 +209,27 @@
     </ClCompile>
     <ClCompile Include="BOJ_17143.cpp">
       <Filter>소스 파일\1014</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_17143_2.cpp">
+      <Filter>소스 파일\1015</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_1949.cpp">
+      <Filter>소스 파일\1015</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_5644.cpp">
+      <Filter>소스 파일\1015</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_1953.cpp">
+      <Filter>소스 파일\1015</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_2477.cpp">
+      <Filter>소스 파일\1015</Filter>
+    </ClCompile>
+    <ClCompile Include="SWEA_4012.cpp">
+      <Filter>소스 파일\1015</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_14948.cpp">
+      <Filter>소스 파일\1015</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

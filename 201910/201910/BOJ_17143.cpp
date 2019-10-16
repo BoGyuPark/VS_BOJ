@@ -15,9 +15,9 @@ struct info {
 vector<info> v;
 void distCal(int dir, int changePos, int dist, int dPos[], int idx, int wallDist) {
 	int initPos, crossPos, maxi;
-	if (dir == 0) initPos = 0, crossPos = n - 1, maxi=n-1;
-	else if (dir == 1) initPos = n-1, crossPos = 0, maxi = n - 1;
-	else if (dir == 2) initPos = m-1, crossPos = 0, maxi = m - 1;
+	if (dir == 0) initPos = 0, crossPos = n - 1, maxi = n - 1;
+	else if (dir == 1) initPos = n - 1, crossPos = 0, maxi = n - 1;
+	else if (dir == 2) initPos = m - 1, crossPos = 0, maxi = m - 1;
 	else initPos= 0, crossPos = m - 1, maxi = m - 1;
 
 	if (dist - wallDist > 0) {
