@@ -49,6 +49,9 @@
     <Filter Include="소스 파일\1017">
       <UniqueIdentifier>{8e51c08d-7e39-45c0-92f3-5eaa27c05c79}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\1021_study">
+      <UniqueIdentifier>{fc835df5-d955-4b2c-af66-99cb8b56810d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_2437.cpp">
@@ -263,6 +266,75 @@
     </ClCompile>
     <ClCompile Include="BOJ_16929.cpp">
       <Filter>소스 파일\1017</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16940.cpp">
+      <Filter>소스 파일\1017</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16935.cpp">
+      <Filter>소스 파일\1017</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_3019.cpp">
+      <Filter>소스 파일\1017</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16936.cpp">
+      <Filter>소스 파일\1017</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16973.cpp">
+      <Filter>소스 파일\1017</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16971.cpp">
+      <Filter>소스 파일\1017</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1120.cpp">
+      <Filter>소스 파일\1017</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_3985.cpp">
+      <Filter>소스 파일\1017</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2980.cpp">
+      <Filter>소스 파일\1017</Filter>
+    </ClCompile>
+    <ClCompile Include="selectSort.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="bubbleSort.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="insertSort.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="quickSort.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_quick_select_insertSort.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="mergeSort.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="heapSort.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1431.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="kruskal.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="tree_travel.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="fibo.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="Tiling1.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="BOj_2XN_Tiling2.cpp">
+      <Filter>소스 파일\1021_study</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_14852.cpp">
+      <Filter>소스 파일\1021_study</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
